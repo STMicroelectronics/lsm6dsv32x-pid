@@ -3928,10 +3928,8 @@ typedef enum
   LSM6DSV32X_EMBED_FUNC_MEM_BANK = 0x1,
   LSM6DSV32X_SENSOR_HUB_MEM_BANK = 0x2,
 } lsm6dsv32x_mem_bank_t;
-int32_t lsm6dsv32x_mem_bank_set(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_mem_bank_t val);
-int32_t lsm6dsv32x_mem_bank_get(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_mem_bank_t *val);
+int32_t lsm6dsv32x_mem_bank_set(const stmdev_ctx_t *ctx, lsm6dsv32x_mem_bank_t val);
+int32_t lsm6dsv32x_mem_bank_get(const stmdev_ctx_t *ctx, lsm6dsv32x_mem_bank_t *val);
 
 int32_t lsm6dsv32x_device_id_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
@@ -3991,10 +3989,8 @@ typedef enum
   LSM6DSV32X_XL_LOW_POWER_8_AVG_MD    = 0x6,
   LSM6DSV32X_XL_NORMAL_MD             = 0x7,
 } lsm6dsv32x_xl_mode_t;
-int32_t lsm6dsv32x_xl_mode_set(const stmdev_ctx_t *ctx,
-                               lsm6dsv32x_xl_mode_t val);
-int32_t lsm6dsv32x_xl_mode_get(const stmdev_ctx_t *ctx,
-                               lsm6dsv32x_xl_mode_t *val);
+int32_t lsm6dsv32x_xl_mode_set(const stmdev_ctx_t *ctx, lsm6dsv32x_xl_mode_t val);
+int32_t lsm6dsv32x_xl_mode_get(const stmdev_ctx_t *ctx, lsm6dsv32x_xl_mode_t *val);
 
 typedef enum
 {
@@ -4003,10 +3999,8 @@ typedef enum
   LSM6DSV32X_GY_SLEEP_MD              = 0x4,
   LSM6DSV32X_GY_LOW_POWER_MD          = 0x5,
 } lsm6dsv32x_gy_mode_t;
-int32_t lsm6dsv32x_gy_mode_set(const stmdev_ctx_t *ctx,
-                               lsm6dsv32x_gy_mode_t val);
-int32_t lsm6dsv32x_gy_mode_get(const stmdev_ctx_t *ctx,
-                               lsm6dsv32x_gy_mode_t *val);
+int32_t lsm6dsv32x_gy_mode_set(const stmdev_ctx_t *ctx, lsm6dsv32x_gy_mode_t val);
+int32_t lsm6dsv32x_gy_mode_get(const stmdev_ctx_t *ctx, lsm6dsv32x_gy_mode_t *val);
 
 int32_t lsm6dsv32x_auto_increment_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv32x_auto_increment_get(const stmdev_ctx_t *ctx, uint8_t *val);
@@ -4225,16 +4219,14 @@ int32_t lsm6dsv32x_temperature_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
 int32_t lsm6dsv32x_angular_rate_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
-int32_t lsm6dsv32x_ois_angular_rate_raw_get(const stmdev_ctx_t *ctx,
-                                            int16_t *val);
+int32_t lsm6dsv32x_ois_angular_rate_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
 int32_t lsm6dsv32x_ois_eis_angular_rate_raw_get(const stmdev_ctx_t *ctx,
                                                 int16_t *val);
 
 int32_t lsm6dsv32x_acceleration_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
-int32_t lsm6dsv32x_dual_acceleration_raw_get(const stmdev_ctx_t *ctx,
-                                             int16_t *val);
+int32_t lsm6dsv32x_dual_acceleration_raw_get(const stmdev_ctx_t *ctx, int16_t *val);
 
 int32_t lsm6dsv32x_ois_dual_acceleration_raw_get(const stmdev_ctx_t *ctx,
                                                  int16_t *val);
@@ -4245,8 +4237,7 @@ int32_t lsm6dsv32x_odr_cal_reg_get(const stmdev_ctx_t *ctx, int8_t *val);
 
 int32_t lsm6dsv32x_ln_pg_write(const stmdev_ctx_t *ctx, uint16_t address,
                                uint8_t *buf, uint8_t len);
-int32_t lsm6dsv32x_ln_pg_read(const stmdev_ctx_t *ctx, uint16_t address,
-                              uint8_t *buf,
+int32_t lsm6dsv32x_ln_pg_read(const stmdev_ctx_t *ctx, uint16_t address, uint8_t *buf,
                               uint8_t len);
 
 int32_t lsm6dsv32x_emb_function_dbg_set(const stmdev_ctx_t *ctx, uint8_t val);
@@ -4276,10 +4267,8 @@ typedef struct
     LEVEL_LATCHED   = 0x03,
   } mode;
 } lsm6dsv32x_den_conf_t;
-int32_t lsm6dsv32x_den_conf_set(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_den_conf_t val);
-int32_t lsm6dsv32x_den_conf_get(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_den_conf_t *val);
+int32_t lsm6dsv32x_den_conf_set(const stmdev_ctx_t *ctx, lsm6dsv32x_den_conf_t val);
+int32_t lsm6dsv32x_den_conf_get(const stmdev_ctx_t *ctx, lsm6dsv32x_den_conf_t *val);
 
 typedef enum
 {
@@ -4311,10 +4300,8 @@ int32_t lsm6dsv32x_gy_eis_data_rate_get(const stmdev_ctx_t *ctx,
 int32_t lsm6dsv32x_fifo_watermark_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv32x_fifo_watermark_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
-int32_t lsm6dsv32x_fifo_xl_dual_fsm_batch_set(const stmdev_ctx_t *ctx,
-                                              uint8_t val);
-int32_t lsm6dsv32x_fifo_xl_dual_fsm_batch_get(const stmdev_ctx_t *ctx,
-                                              uint8_t *val);
+int32_t lsm6dsv32x_fifo_xl_dual_fsm_batch_set(const stmdev_ctx_t *ctx, uint8_t val);
+int32_t lsm6dsv32x_fifo_xl_dual_fsm_batch_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
 typedef enum
 {
@@ -4393,8 +4380,7 @@ typedef enum
   LSM6DSV32X_STREAM_MODE             = 0x6,
   LSM6DSV32X_BYPASS_TO_FIFO_MODE     = 0x7,
 } lsm6dsv32x_fifo_mode_t;
-int32_t lsm6dsv32x_fifo_mode_set(const stmdev_ctx_t *ctx,
-                                 lsm6dsv32x_fifo_mode_t val);
+int32_t lsm6dsv32x_fifo_mode_set(const stmdev_ctx_t *ctx, lsm6dsv32x_fifo_mode_t val);
 int32_t lsm6dsv32x_fifo_mode_get(const stmdev_ctx_t *ctx,
                                  lsm6dsv32x_fifo_mode_t *val);
 
@@ -4498,15 +4484,11 @@ int32_t lsm6dsv32x_fifo_stpcnt_batch_get(const stmdev_ctx_t *ctx, uint8_t *val);
 int32_t lsm6dsv32x_fifo_mlc_batch_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv32x_fifo_mlc_batch_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
-int32_t lsm6dsv32x_fifo_mlc_filt_batch_set(const stmdev_ctx_t *ctx,
-                                           uint8_t val);
-int32_t lsm6dsv32x_fifo_mlc_filt_batch_get(const stmdev_ctx_t *ctx,
-                                           uint8_t *val);
+int32_t lsm6dsv32x_fifo_mlc_filt_batch_set(const stmdev_ctx_t *ctx, uint8_t val);
+int32_t lsm6dsv32x_fifo_mlc_filt_batch_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
-int32_t lsm6dsv32x_fifo_sh_batch_slave_set(const stmdev_ctx_t *ctx, uint8_t idx,
-                                           uint8_t val);
-int32_t lsm6dsv32x_fifo_sh_batch_slave_get(const stmdev_ctx_t *ctx, uint8_t idx,
-                                           uint8_t *val);
+int32_t lsm6dsv32x_fifo_sh_batch_slave_set(const stmdev_ctx_t *ctx, uint8_t idx, uint8_t val);
+int32_t lsm6dsv32x_fifo_sh_batch_slave_get(const stmdev_ctx_t *ctx, uint8_t idx, uint8_t *val);
 
 typedef struct
 {
@@ -4591,10 +4573,8 @@ int32_t lsm6dsv32x_filt_xl_lp2_get(const stmdev_ctx_t *ctx, uint8_t *val);
 int32_t lsm6dsv32x_filt_xl_hp_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv32x_filt_xl_hp_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
-int32_t lsm6dsv32x_filt_xl_fast_settling_set(const stmdev_ctx_t *ctx,
-                                             uint8_t val);
-int32_t lsm6dsv32x_filt_xl_fast_settling_get(const stmdev_ctx_t *ctx,
-                                             uint8_t *val);
+int32_t lsm6dsv32x_filt_xl_fast_settling_set(const stmdev_ctx_t *ctx, uint8_t val);
+int32_t lsm6dsv32x_filt_xl_fast_settling_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
 typedef enum
 {
@@ -4617,10 +4597,8 @@ int32_t lsm6dsv32x_filt_wkup_act_feed_set(const stmdev_ctx_t *ctx,
 int32_t lsm6dsv32x_filt_wkup_act_feed_get(const stmdev_ctx_t *ctx,
                                           lsm6dsv32x_filt_wkup_act_feed_t *val);
 
-int32_t lsm6dsv32x_mask_trigger_xl_settl_set(const stmdev_ctx_t *ctx,
-                                             uint8_t val);
-int32_t lsm6dsv32x_mask_trigger_xl_settl_get(const stmdev_ctx_t *ctx,
-                                             uint8_t *val);
+int32_t lsm6dsv32x_mask_trigger_xl_settl_set(const stmdev_ctx_t *ctx, uint8_t val);
+int32_t lsm6dsv32x_mask_trigger_xl_settl_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
 typedef enum
 {
@@ -4692,10 +4670,8 @@ typedef struct
   uint8_t fsm7_en              : 1;
   uint8_t fsm8_en              : 1;
 } lsm6dsv32x_fsm_mode_t;
-int32_t lsm6dsv32x_fsm_mode_set(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_fsm_mode_t val);
-int32_t lsm6dsv32x_fsm_mode_get(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_fsm_mode_t *val);
+int32_t lsm6dsv32x_fsm_mode_set(const stmdev_ctx_t *ctx, lsm6dsv32x_fsm_mode_t val);
+int32_t lsm6dsv32x_fsm_mode_get(const stmdev_ctx_t *ctx, lsm6dsv32x_fsm_mode_t *val);
 
 int32_t lsm6dsv32x_fsm_long_cnt_set(const stmdev_ctx_t *ctx, uint16_t val);
 int32_t lsm6dsv32x_fsm_long_cnt_get(const stmdev_ctx_t *ctx, uint16_t *val);
@@ -4712,8 +4688,7 @@ typedef struct
   uint8_t fsm_outs7;
   uint8_t fsm_outs8;
 } lsm6dsv32x_fsm_out_t;
-int32_t lsm6dsv32x_fsm_out_get(const stmdev_ctx_t *ctx,
-                               lsm6dsv32x_fsm_out_t *val);
+int32_t lsm6dsv32x_fsm_out_get(const stmdev_ctx_t *ctx, lsm6dsv32x_fsm_out_t *val);
 
 typedef enum
 {
@@ -4802,19 +4777,14 @@ int32_t lsm6dsv32x_fsm_ext_sens_x_orient_set(const stmdev_ctx_t *ctx,
 int32_t lsm6dsv32x_fsm_ext_sens_x_orient_get(const stmdev_ctx_t *ctx,
                                              lsm6dsv32x_fsm_ext_sens_x_orient_t *val);
 
-int32_t lsm6dsv32x_fsm_long_cnt_timeout_set(const stmdev_ctx_t *ctx,
-                                            uint16_t val);
-int32_t lsm6dsv32x_fsm_long_cnt_timeout_get(const stmdev_ctx_t *ctx,
-                                            uint16_t *val);
+int32_t lsm6dsv32x_fsm_long_cnt_timeout_set(const stmdev_ctx_t *ctx, uint16_t val);
+int32_t lsm6dsv32x_fsm_long_cnt_timeout_get(const stmdev_ctx_t *ctx, uint16_t *val);
 
-int32_t lsm6dsv32x_fsm_number_of_programs_set(const stmdev_ctx_t *ctx,
-                                              uint8_t val);
-int32_t lsm6dsv32x_fsm_number_of_programs_get(const stmdev_ctx_t *ctx,
-                                              uint8_t *val);
+int32_t lsm6dsv32x_fsm_number_of_programs_set(const stmdev_ctx_t *ctx, uint8_t val);
+int32_t lsm6dsv32x_fsm_number_of_programs_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
 int32_t lsm6dsv32x_fsm_start_address_set(const stmdev_ctx_t *ctx, uint16_t val);
-int32_t lsm6dsv32x_fsm_start_address_get(const stmdev_ctx_t *ctx,
-                                         uint16_t *val);
+int32_t lsm6dsv32x_fsm_start_address_get(const stmdev_ctx_t *ctx, uint16_t *val);
 
 int32_t lsm6dsv32x_ff_time_windows_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv32x_ff_time_windows_get(const stmdev_ctx_t *ctx, uint8_t *val);
@@ -4866,8 +4836,7 @@ typedef struct
   uint8_t mlc3_src;
   uint8_t mlc4_src;
 } lsm6dsv32x_mlc_out_t;
-int32_t lsm6dsv32x_mlc_out_get(const stmdev_ctx_t *ctx,
-                               lsm6dsv32x_mlc_out_t *val);
+int32_t lsm6dsv32x_mlc_out_get(const stmdev_ctx_t *ctx, lsm6dsv32x_mlc_out_t *val);
 
 int32_t lsm6dsv32x_mlc_ext_sens_sensitivity_set(const stmdev_ctx_t *ctx,
                                                 uint16_t val);
@@ -4887,10 +4856,8 @@ int32_t lsm6dsv32x_ois_ctrl_mode_get(const stmdev_ctx_t *ctx,
 int32_t lsm6dsv32x_ois_reset_set(const stmdev_ctx_t *ctx, int8_t val);
 int32_t lsm6dsv32x_ois_reset_get(const stmdev_ctx_t *ctx, int8_t *val);
 
-int32_t lsm6dsv32x_ois_interface_pull_up_set(const stmdev_ctx_t *ctx,
-                                             uint8_t val);
-int32_t lsm6dsv32x_ois_interface_pull_up_get(const stmdev_ctx_t *ctx,
-                                             uint8_t *val);
+int32_t lsm6dsv32x_ois_interface_pull_up_set(const stmdev_ctx_t *ctx, uint8_t val);
+int32_t lsm6dsv32x_ois_interface_pull_up_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
 typedef struct
 {
@@ -4917,8 +4884,7 @@ typedef struct
   uint8_t gy                   : 1;
   uint8_t xl                   : 1;
 } lsm6dsv32x_ois_chain_t;
-int32_t lsm6dsv32x_ois_chain_set(const stmdev_ctx_t *ctx,
-                                 lsm6dsv32x_ois_chain_t val);
+int32_t lsm6dsv32x_ois_chain_set(const stmdev_ctx_t *ctx, lsm6dsv32x_ois_chain_t val);
 int32_t lsm6dsv32x_ois_chain_get(const stmdev_ctx_t *ctx,
                                  lsm6dsv32x_ois_chain_t *val);
 
@@ -5106,10 +5072,8 @@ typedef enum
   LSM6DSV32X_SPI_4_WIRE = 0x0,
   LSM6DSV32X_SPI_3_WIRE = 0x1,
 } lsm6dsv32x_spi_mode_t;
-int32_t lsm6dsv32x_spi_mode_set(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_spi_mode_t val);
-int32_t lsm6dsv32x_spi_mode_get(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_spi_mode_t *val);
+int32_t lsm6dsv32x_spi_mode_set(const stmdev_ctx_t *ctx, lsm6dsv32x_spi_mode_t val);
+int32_t lsm6dsv32x_spi_mode_get(const stmdev_ctx_t *ctx, lsm6dsv32x_spi_mode_t *val);
 
 int32_t lsm6dsv32x_ui_sda_pull_up_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv32x_ui_sda_pull_up_get(const stmdev_ctx_t *ctx, uint8_t *val);
@@ -5119,8 +5083,7 @@ typedef enum
   LSM6DSV32X_SPI2_4_WIRE = 0x0,
   LSM6DSV32X_SPI2_3_WIRE = 0x1,
 } lsm6dsv32x_spi2_mode_t;
-int32_t lsm6dsv32x_spi2_mode_set(const stmdev_ctx_t *ctx,
-                                 lsm6dsv32x_spi2_mode_t val);
+int32_t lsm6dsv32x_spi2_mode_set(const stmdev_ctx_t *ctx, lsm6dsv32x_spi2_mode_t val);
 int32_t lsm6dsv32x_spi2_mode_get(const stmdev_ctx_t *ctx,
                                  lsm6dsv32x_spi2_mode_t *val);
 
@@ -5149,8 +5112,7 @@ int32_t lsm6dsv32x_stpcnt_period_set(const stmdev_ctx_t *ctx, uint16_t val);
 int32_t lsm6dsv32x_stpcnt_period_get(const stmdev_ctx_t *ctx, uint16_t *val);
 
 int32_t lsm6dsv32x_sflp_game_rotation_set(const stmdev_ctx_t *ctx, uint8_t val);
-int32_t lsm6dsv32x_sflp_game_rotation_get(const stmdev_ctx_t *ctx,
-                                          uint8_t *val);
+int32_t lsm6dsv32x_sflp_game_rotation_get(const stmdev_ctx_t *ctx, uint8_t *val);
 
 typedef struct
 {
@@ -5227,10 +5189,8 @@ typedef enum
   LSM6DSV32X_ONLY_SINGLE        = 0x0,
   LSM6DSV32X_BOTH_SINGLE_DOUBLE = 0x1,
 } lsm6dsv32x_tap_mode_t;
-int32_t lsm6dsv32x_tap_mode_set(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_tap_mode_t val);
-int32_t lsm6dsv32x_tap_mode_get(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_tap_mode_t *val);
+int32_t lsm6dsv32x_tap_mode_set(const stmdev_ctx_t *ctx, lsm6dsv32x_tap_mode_t val);
+int32_t lsm6dsv32x_tap_mode_get(const stmdev_ctx_t *ctx, lsm6dsv32x_tap_mode_t *val);
 
 int32_t lsm6dsv32x_tilt_mode_set(const stmdev_ctx_t *ctx, uint8_t val);
 int32_t lsm6dsv32x_tilt_mode_get(const stmdev_ctx_t *ctx, uint8_t *val);
@@ -5247,10 +5207,8 @@ typedef enum
   LSM6DSV32X_XL_LOW_POWER_GY_SLEEP        = 0x2,
   LSM6DSV32X_XL_LOW_POWER_GY_POWER_DOWN   = 0x3,
 } lsm6dsv32x_act_mode_t;
-int32_t lsm6dsv32x_act_mode_set(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_act_mode_t val);
-int32_t lsm6dsv32x_act_mode_get(const stmdev_ctx_t *ctx,
-                                lsm6dsv32x_act_mode_t *val);
+int32_t lsm6dsv32x_act_mode_set(const stmdev_ctx_t *ctx, lsm6dsv32x_act_mode_t val);
+int32_t lsm6dsv32x_act_mode_get(const stmdev_ctx_t *ctx, lsm6dsv32x_act_mode_t *val);
 
 typedef enum
 {
