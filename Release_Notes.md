@@ -44,14 +44,26 @@ This directory contains the LSM6DSV32X component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section2" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section2" aria-hidden="true">
 <label for="collapse-section2" aria-hidden="true">V1.0.1 / 20-Mar-2024</label>
-<div>			
+<div>
 
 ## Main changes
 
 - Fixed code style (Artistic Style Version 3.4.13)
 - Fix code style
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section3" checked aria-hidden="true">
+<label for="collapse-section3" aria-hidden="true">V1.0.2 / 02-Apr-2024</label>
+<div>
+
+## Main changes
+
+- updated README.md file with tag reference and mdelay description
 
 ##
 
