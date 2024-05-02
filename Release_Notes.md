@@ -57,7 +57,7 @@ This directory contains the LSM6DSV32X component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section3" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section3" aria-hidden="true">
 <label for="collapse-section3" aria-hidden="true">V1.0.2 / 02-Apr-2024</label>
 <div>
 
@@ -68,7 +68,20 @@ This directory contains the LSM6DSV32X component drivers.
 ##
 
 </div>
+
+<input type="checkbox" id="collapse-section4" checked aria-hidden="true">
+<label for="collapse-section4" aria-hidden="true">V1.0.3 / 02-May-2024</label>
+<div>
+
+## Main changes
+
+- Fix BDR counter regsters get/set APIs
+
+##
+
+</div>
 :::
+
 
 
 :::
