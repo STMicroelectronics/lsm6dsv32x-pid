@@ -3002,16 +3002,16 @@ int32_t lsm6dsv32x_den_conf_get(const stmdev_ctx_t *ctx, lsm6dsv32x_den_conf_t *
 
   switch ((den.lvl1_en << 1) + den.lvl2_en)
   {
-    case LEVEL_TRIGGER:
-      val->mode = LEVEL_TRIGGER;
+    case LSM6DSV32X_LEVEL_TRIGGER:
+      val->mode = LSM6DSV32X_LEVEL_TRIGGER;
       break;
 
-    case LEVEL_LATCHED:
-      val->mode = LEVEL_LATCHED;
+    case LSM6DSV32X_LEVEL_LATCHED:
+      val->mode = LSM6DSV32X_LEVEL_LATCHED;
       break;
 
     default:
-      val->mode = DEN_NOT_DEFINED;
+      val->mode = LSM6DSV32X_DEN_NOT_DEFINED;
       break;
   }
 
