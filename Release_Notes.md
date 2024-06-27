@@ -81,7 +81,7 @@ This directory contains the LSM6DSV32X component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section5" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section5" aria-hidden="true">
 <label for="collapse-section5" aria-hidden="true">V1.1.0 / 22-May-2024</label>
 <div>
 
@@ -93,8 +93,19 @@ This directory contains the LSM6DSV32X component drivers.
 ##
 
 </div>
-:::
 
+<input type="checkbox" id="collapse-section6" checked aria-hidden="true">
+<label for="collapse-section6" aria-hidden="true">V2.0.0 / 22-Jun-2024</label>
+<div>
+
+## Main changes
+
+- Add defs for num_phy routines
+
+##
+
+</div>
+:::
 
 :::
 :::
