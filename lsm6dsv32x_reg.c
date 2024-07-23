@@ -1999,7 +1999,7 @@ int32_t lsm6dsv32x_pin_int1_route_get(const stmdev_ctx_t *ctx,
   * @brief   Select the signal that need to route on int2 pad[set]
   *
   * @param  ctx    Read / write interface definitions.(ptr)
-  * @param  val    the signals to route on int1 pin.
+  * @param  val    the signals to route on int2 pin.
   * @retval        Interface status (MANDATORY: return 0 -> no Error).
   *
   */
@@ -2008,6 +2008,7 @@ int32_t lsm6dsv32x_pin_int2_route_set(const stmdev_ctx_t *ctx,
 {
   lsm6dsv32x_int2_ctrl_t          int2_ctrl;
   lsm6dsv32x_ctrl4_t              ctrl4;
+  lsm6dsv32x_ctrl7_t              ctrl7;
   lsm6dsv32x_md2_cfg_t            md2_cfg;
   int32_t ret;
 
@@ -2040,6 +2041,14 @@ int32_t lsm6dsv32x_pin_int2_route_set(const stmdev_ctx_t *ctx,
     return ret;
   }
 
+  ret = lsm6dsv32x_read_reg(ctx, LSM6DSV32X_CTRL7, (uint8_t *)&ctrl7, 1);
+  ctrl7.int2_drdy_ah_qvar         = val->drdy_ah_qvar;
+  ret += lsm6dsv32x_write_reg(ctx, LSM6DSV32X_CTRL7, (uint8_t *)&ctrl7, 1);
+  if (ret != 0)
+  {
+    return ret;
+  }
+
   ret = lsm6dsv32x_read_reg(ctx, LSM6DSV32X_MD2_CFG, (uint8_t *)&md2_cfg, 1);
   if (ret != 0)
   {
@@ -2064,7 +2073,7 @@ int32_t lsm6dsv32x_pin_int2_route_set(const stmdev_ctx_t *ctx,
   * @brief  Select the signal that need to route on int2 pad.[get]
   *
   * @param  ctx    Read / write interface definitions.(ptr)
-  * @param  val    the signals that are routed on int1 pin.(ptr)
+  * @param  val    the signals that are routed on int2 pin.(ptr)
   * @retval        Interface status (MANDATORY: return 0 -> no Error).
   *
   */
@@ -2073,6 +2082,7 @@ int32_t lsm6dsv32x_pin_int2_route_get(const stmdev_ctx_t *ctx,
 {
   lsm6dsv32x_int2_ctrl_t          int2_ctrl;
   lsm6dsv32x_ctrl4_t              ctrl4;
+  lsm6dsv32x_ctrl7_t              ctrl7;
   lsm6dsv32x_md2_cfg_t            md2_cfg;
   int32_t ret;
 
@@ -2098,6 +2108,14 @@ int32_t lsm6dsv32x_pin_int2_route_get(const stmdev_ctx_t *ctx,
   }
 
   val->drdy_temp      = ctrl4.int2_drdy_temp;
+
+  ret = lsm6dsv32x_read_reg(ctx, LSM6DSV32X_CTRL7, (uint8_t *)&ctrl7, 1);
+  if (ret != 0)
+  {
+    return ret;
+  }
+
+  val->drdy_ah_qvar = ctrl7.int2_drdy_ah_qvar;
 
   ret = lsm6dsv32x_read_reg(ctx, LSM6DSV32X_MD2_CFG, (uint8_t *)&md2_cfg, 1);
   if (ret != 0)
