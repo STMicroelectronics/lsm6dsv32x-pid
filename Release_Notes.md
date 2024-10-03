@@ -94,13 +94,25 @@ This directory contains the LSM6DSV32X component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section6" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section6" aria-hidden="true">
 <label for="collapse-section6" aria-hidden="true">V2.0.0 / 22-Jun-2024</label>
 <div>
 
 ## Main changes
 
 - Add defs for num_phy routines
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section7" checked aria-hidden="true">
+<label for="collapse-section7" aria-hidden="true">V2.1.0 / 03-Oct-2024</label>
+<div>
+
+## Main changes
+
+- Add int2_drdy_ah_qvar event routing on INT2 pin
 
 ##
 
