@@ -3521,13 +3521,8 @@ int32_t lsm6dsv32x_fifo_watermark_set(const stmdev_ctx_t *ctx, uint8_t val)
   lsm6dsv32x_fifo_ctrl1_t fifo_ctrl1;
   int32_t ret;
 
-  ret = lsm6dsv32x_read_reg(ctx, LSM6DSV32X_FIFO_CTRL1, (uint8_t *)&fifo_ctrl1, 1);
-
-  if (ret == 0)
-  {
-    fifo_ctrl1.wtm = val;
-    ret = lsm6dsv32x_write_reg(ctx, LSM6DSV32X_FIFO_CTRL1, (uint8_t *)&fifo_ctrl1, 1);
-  }
+  fifo_ctrl1.wtm = val;
+  ret = lsm6dsv32x_write_reg(ctx, LSM6DSV32X_FIFO_CTRL1, (uint8_t *)&fifo_ctrl1, 1);
 
   return ret;
 }
