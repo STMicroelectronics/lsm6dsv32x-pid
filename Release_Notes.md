@@ -118,7 +118,7 @@ This directory contains the LSM6DSV32X component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section8" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section8" aria-hidden="true">
 <label for="collapse-section8" aria-hidden="true">V2.2.0 / 25-Oct-2024</label>
 <div>
 
@@ -131,7 +131,21 @@ This directory contains the LSM6DSV32X component drivers.
 ##
 
 </div>
+
+<input type="checkbox" id="collapse-section9" checked aria-hidden="true">
+<label for="collapse-section9" aria-hidden="true">V2.3.0 / 18-Dec-2024</label>
+<div>
+
+## Main changes
+
+- Move fifo_tag out of struct fifo_out_raw
+- Add API to transform float16 to float32
+
+##
+
+</div>
 :::
+
 
 :::
 :::
