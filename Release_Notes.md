@@ -30,129 +30,25 @@ This directory contains the LSM6DSV32X component drivers.
 # Update history
 
 ::: {.collapse}
-<input type="checkbox" id="collapse-section1" aria-hidden="true">
-<label for="collapse-section1" aria-hidden="true">V1.0.0 / 22-Feb-2024</label>
+<input type="checkbox" id="collapse-section13" checked aria-hidden="true">
+<label for="collapse-section13" aria-hidden="true">V4.0.1 / 19-Nov-2025</label>
 <div>
 
 ## Main changes
 
-### First release
-
-- First official release [ref. DS v2.0]
+- (fix) do not jump to exit before initing master_config
 
 ##
 
 </div>
-
-<input type="checkbox" id="collapse-section2" aria-hidden="true">
-<label for="collapse-section2" aria-hidden="true">V1.0.1 / 20-Mar-2024</label>
+<input type="checkbox" id="collapse-section12" aria-hidden="true">
+<label for="collapse-section12" aria-hidden="true">V4.0.0 / 05-Nov-2025</label>
 <div>
 
 ## Main changes
 
-- Fixed code style (Artistic Style Version 3.4.13)
-- Fix code style
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section3" aria-hidden="true">
-<label for="collapse-section3" aria-hidden="true">V1.0.2 / 02-Apr-2024</label>
-<div>
-
-## Main changes
-
-- updated README.md file with tag reference and mdelay description
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section4" aria-hidden="true">
-<label for="collapse-section4" aria-hidden="true">V1.0.3 / 02-May-2024</label>
-<div>
-
-## Main changes
-
-- Fix BDR counter regsters get/set APIs
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section5" aria-hidden="true">
-<label for="collapse-section5" aria-hidden="true">V1.1.0 / 22-May-2024</label>
-<div>
-
-## Main changes
-
-- Add i3c_int_en set/get APIs
-- Fix enum mode macros in den_conf_t struct
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section6" aria-hidden="true">
-<label for="collapse-section6" aria-hidden="true">V2.0.0 / 22-Jun-2024</label>
-<div>
-
-## Main changes
-
-- Add defs for num_phy routines
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section7" aria-hidden="true">
-<label for="collapse-section7" aria-hidden="true">V2.1.0 / 03-Oct-2024</label>
-<div>
-
-## Main changes
-
-- Add int2_drdy_ah_qvar event routing on INT2 pin
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section8" aria-hidden="true">
-<label for="collapse-section8" aria-hidden="true">V2.2.0 / 25-Oct-2024</label>
-<div>
-
-## Main changes
-
-- added struct types to help parsing FIFO data
-- Complete APIs for handling embedded functions
-- simplify efficiently the fifo_read API
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section9" aria-hidden="true">
-<label for="collapse-section9" aria-hidden="true">V2.3.0 / 18-Dec-2024</label>
-<div>
-
-## Main changes
-
-- Move fifo_tag out of struct fifo_out_raw
-- Add API to transform float16 to float32
-
-##
-
-</div>
-
-<input type="checkbox" id="collapse-section10" aria-hidden="true">
-<label for="collapse-section10" aria-hidden="true">V2.4.0 / 07-Jul-2025</label>
-<div>
-
-## Main changes
-
-- Fix driver formatting options
-- Added pointer to private data in stmdev_ctx_t
+- split reset into 3 routines (reboot, sw_por, reset)
+- (FIX) move memset in pin_int2_route_get() API
 
 ##
 
@@ -175,30 +71,134 @@ This directory contains the LSM6DSV32X component drivers.
 
 </div>
 
-<input type="checkbox" id="collapse-section12" aria-hidden="true">
-<label for="collapse-section12" aria-hidden="true">V4.0.0 / 05-Nov-2025</label>
+<input type="checkbox" id="collapse-section10" aria-hidden="true">
+<label for="collapse-section10" aria-hidden="true">V2.4.0 / 07-Jul-2025</label>
 <div>
 
 ## Main changes
 
-- split reset into 3 routines (reboot, sw_por, reset)
-- (FIX) move memset in pin_int2_route_get() API
+- Fix driver formatting options
+- Added pointer to private data in stmdev_ctx_t
 
 ##
 
 </div>
 
-<input type="checkbox" id="collapse-section13" checked aria-hidden="true">
-<label for="collapse-section13" aria-hidden="true">V4.0.1 / 19-Nov-2025</label>
+<input type="checkbox" id="collapse-section9" aria-hidden="true">
+<label for="collapse-section9" aria-hidden="true">V2.3.0 / 18-Dec-2024</label>
 <div>
 
 ## Main changes
 
-- (fix) do not jump to exit before initing master_config
+- Move fifo_tag out of struct fifo_out_raw
+- Add API to transform float16 to float32
 
 ##
 
 </div>
+
+<input type="checkbox" id="collapse-section8" aria-hidden="true">
+<label for="collapse-section8" aria-hidden="true">V2.2.0 / 25-Oct-2024</label>
+<div>
+
+## Main changes
+
+- added struct types to help parsing FIFO data
+- Complete APIs for handling embedded functions
+- simplify efficiently the fifo_read API
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section7" aria-hidden="true">
+<label for="collapse-section7" aria-hidden="true">V2.1.0 / 03-Oct-2024</label>
+<div>
+
+## Main changes
+
+- Add int2_drdy_ah_qvar event routing on INT2 pin
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section6" aria-hidden="true">
+<label for="collapse-section6" aria-hidden="true">V2.0.0 / 22-Jun-2024</label>
+<div>
+
+## Main changes
+
+- Add defs for num_phy routines
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section5" aria-hidden="true">
+<label for="collapse-section5" aria-hidden="true">V1.1.0 / 22-May-2024</label>
+<div>
+
+## Main changes
+
+- Add i3c_int_en set/get APIs
+- Fix enum mode macros in den_conf_t struct
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section4" aria-hidden="true">
+<label for="collapse-section4" aria-hidden="true">V1.0.3 / 02-May-2024</label>
+<div>
+
+## Main changes
+
+- Fix BDR counter regsters get/set APIs
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section3" aria-hidden="true">
+<label for="collapse-section3" aria-hidden="true">V1.0.2 / 02-Apr-2024</label>
+<div>
+
+## Main changes
+
+- updated README.md file with tag reference and mdelay description
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section2" aria-hidden="true">
+<label for="collapse-section2" aria-hidden="true">V1.0.1 / 20-Mar-2024</label>
+<div>
+
+## Main changes
+
+- Fixed code style (Artistic Style Version 3.4.13)
+- Fix code style
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section1" aria-hidden="true">
+<label for="collapse-section1" aria-hidden="true">V1.0.0 / 22-Feb-2024</label>
+<div>
+
+## Main changes
+
+### First release
+
+- First official release [ref. DS v2.0]
+
+##
+
+</div>
+
 :::
 
 
