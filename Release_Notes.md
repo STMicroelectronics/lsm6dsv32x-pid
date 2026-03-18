@@ -30,7 +30,19 @@ This directory contains the LSM6DSV32X component drivers.
 # Update history
 
 ::: {.collapse}
-<input type="checkbox" id="collapse-section14" checked aria-hidden="true">
+<input type="checkbox" id="collapse-section15" checked aria-hidden="true">
+<label for="collapse-section15" aria-hidden="true">V4.1.1 / 18-Mar-2026</label>
+<div>
+
+## Main changes
+
+- Revert int_route_t structure split
+
+##
+
+</div>
+
+<input type="checkbox" id="collapse-section14" aria-hidden="true">
 <label for="collapse-section14" aria-hidden="true">V4.1.0 / 12-Mar-2026</label>
 <div>
 
