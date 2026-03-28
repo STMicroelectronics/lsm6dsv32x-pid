@@ -3734,18 +3734,12 @@ int32_t lsm6dsv32x_fifo_xl_dual_channel_batch_get(const stmdev_ctx_t *ctx, uint8
 	lsm6dsv32x_emb_func_cfg_t emb_func_cfg;
 	int32_t ret;
  
-	ret = lsm6dsv32x_read_reg(ctx, LSM6DSV32X_EMB_FUNC_CFG, (uint8_t *)&emb_func_cfg, 1);
-	if (ret != 0)
-	{
-	    return ret;
-	}
- 
- ret = lsm6dsv32x_read_reg(ctx, LSM6DSV32X_EMB_FUNC_CFG, (uint8_t *)&emb_func_cfg, 1);
- if (ret == 0)
- {
-   *val = emb_func_cfg.xl_dualc_batch_from_if;
- }
- return ret;
+    ret = lsm6dsv32x_read_reg(ctx, LSM6DSV32X_EMB_FUNC_CFG, (uint8_t *)&emb_func_cfg, 1);
+    if (ret == 0)
+    {
+        *val = emb_func_cfg.xl_dualc_batch_from_if;
+    }
+    return ret;
 }
 
 int32_t lsm6dsv32x_fifo_status_get(const stmdev_ctx_t *ctx,
