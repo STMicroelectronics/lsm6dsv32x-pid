@@ -1441,9 +1441,11 @@ typedef struct
   uint8_t emb_func_disable     : 1;
   uint8_t emb_func_irq_mask_xl_settl : 1;
   uint8_t emb_func_irq_mask_g_settl  : 1;
-  uint8_t not_used1            : 2;
+  uint8_t not_used1            : 1;
+  uint8_t xl_dualc_batch_from_if : 1;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t not_used1            : 2;
+  uint8_t xl_dualc_batch_from_if : 1;
+  uint8_t not_used1            : 1;
   uint8_t emb_func_irq_mask_g_settl  : 1;
   uint8_t emb_func_irq_mask_xl_settl : 1;
   uint8_t emb_func_disable     : 1;
