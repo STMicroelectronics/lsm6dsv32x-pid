@@ -1437,19 +1437,19 @@ typedef struct
 typedef struct
 {
 #if DRV_BYTE_ORDER == DRV_LITTLE_ENDIAN
-  uint8_t not_used0            : 3;
-  uint8_t emb_func_disable     : 1;
+  uint8_t not_used0                  : 3;
+  uint8_t emb_func_disable           : 1;
   uint8_t emb_func_irq_mask_xl_settl : 1;
   uint8_t emb_func_irq_mask_g_settl  : 1;
-  uint8_t not_used1            : 1;
-  uint8_t xl_dualc_batch_from_if : 1;
+  uint8_t not_used1                  : 1;
+  uint8_t xl_dualc_batch_from_if     : 1;
 #elif DRV_BYTE_ORDER == DRV_BIG_ENDIAN
-  uint8_t xl_dualc_batch_from_if : 1;
-  uint8_t not_used1            : 1;
+  uint8_t xl_dualc_batch_from_if     : 1;
+  uint8_t not_used1                  : 1;
   uint8_t emb_func_irq_mask_g_settl  : 1;
   uint8_t emb_func_irq_mask_xl_settl : 1;
-  uint8_t emb_func_disable     : 1;
-  uint8_t not_used0            : 3;
+  uint8_t emb_func_disable           : 1;
+  uint8_t not_used0                  : 3;
 #endif /* DRV_BYTE_ORDER */
 } lsm6dsv32x_emb_func_cfg_t;
 
