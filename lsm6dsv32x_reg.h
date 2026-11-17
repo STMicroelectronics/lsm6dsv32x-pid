@@ -3625,8 +3625,8 @@ typedef struct
  * implementation to override the driver's default implementation.
  * This compiler extension is intentionally used on supported toolchains.
  */
-#ifndef LSM6DSV16X_WEAK
-#define LSM6DSV16X_WEAK __attribute__((weak))
+#ifndef LSM6DSV32X_WEAK
+#define LSM6DSV32X_WEAK __attribute__((weak))
 #endif
 
 /**
